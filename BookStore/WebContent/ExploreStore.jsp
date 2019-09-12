@@ -23,20 +23,20 @@ ResultSet rs=ps.executeQuery();
 <body>
 <h3>Store</h3>
 <hr>
-<form action="BookListServlet">
+
 <%
 while(rs.next())
 {
 	String s=rs.getString(1);
 %>	
-Subject <input type="checkbox" value="<%=s%>" /><%=s%><br><br>
+Subject <input type="checkbox" name="subject" value="<%=s%>" /><%=s%><br><br>
 <% 	
 	}
 %>
 
 <input type="submit" value="Get-List"/>
 
-</form>
+
 <hr>
 
 
